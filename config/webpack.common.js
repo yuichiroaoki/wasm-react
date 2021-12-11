@@ -11,6 +11,10 @@ module.exports = {
   // Where webpack looks to start building the bundle
   entry: [paths.src + '/index.js'],
 
+  experiments: {
+    asyncWebAssembly: true,
+    syncWebAssembly: true
+  },
   // Where webpack outputs the assets and bundles
   output: {
     path: paths.build,
@@ -53,10 +57,6 @@ module.exports = {
 
   // Determine how modules within the project are treated
   module: {
-    experiments: {
-      asyncWebAssembly: true,
-      syncWebAssembly: true
-    },
     rules: [
       // JavaScript: Use Babel to transpile JavaScript files
       { test: /\.(js|jsx)$/, exclude: /node_modules/, use: ['babel-loader'] },

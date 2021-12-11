@@ -5,6 +5,10 @@ import './app.styles.scss'
 
 class App extends Component {
   render() {
+    import('wasm-module').then(module => {
+      module.greet();
+    });
+
     return (
       <div className='flex items-center justify-center h-screen'>
         <div className='text-black font-bold rounded-lg border shadow-lg p-10 m-20'>
