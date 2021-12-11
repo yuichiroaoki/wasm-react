@@ -53,6 +53,10 @@ module.exports = {
 
   // Determine how modules within the project are treated
   module: {
+    experiments: {
+      asyncWebAssembly: true,
+      syncWebAssembly: true
+    },
     rules: [
       // JavaScript: Use Babel to transpile JavaScript files
       { test: /\.(js|jsx)$/, exclude: /node_modules/, use: ['babel-loader'] },
