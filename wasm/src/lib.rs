@@ -2,8 +2,6 @@ mod utils;
 
 use wasm_bindgen::prelude::*;
 
-pub use wasm_bindgen_rayon::init_thread_pool;
-
 // ...
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
