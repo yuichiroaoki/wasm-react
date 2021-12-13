@@ -8,8 +8,7 @@ class App extends Component {
     import('wasm-module').then(async (init) => {
       console.log(init);
       await init.default();
-
-      await init.initThreadPool(navigator.hardwareConcurrency);
+      // await init.initThreadPool(navigator.hardwareConcurrency);
       init.greet();
     });
 

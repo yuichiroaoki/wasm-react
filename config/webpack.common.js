@@ -13,7 +13,6 @@ module.exports = {
 
   experiments: {
     asyncWebAssembly: true,
-    syncWebAssembly: true
   },
   // Where webpack outputs the assets and bundles
   output: {
