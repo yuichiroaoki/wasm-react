@@ -13,6 +13,10 @@ module.exports = merge(common, {
 
   // Spin up a server for quick development
   devServer: {
+    headers: {
+      "Cross-Origin-Embedder-Policy": "require-corp",
+      "Cross-Origin-Opener-Policy": "same-origin"
+    },
     historyApiFallback: true,
     contentBase: paths.build,
     open: false,

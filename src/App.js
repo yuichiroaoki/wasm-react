@@ -5,8 +5,12 @@ import './app.styles.scss'
 
 class App extends Component {
   render() {
-    import('wasm-module').then(module => {
-      module.greet();
+    import('wasm-module').then(async (init) => {
+      console.log(init);
+      await init.default();
+
+      await init.initThreadPool(navigator.hardwareConcurrency);
+      init.greet();
     });
 
     return (
